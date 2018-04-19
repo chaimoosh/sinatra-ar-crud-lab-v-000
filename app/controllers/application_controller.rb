@@ -40,10 +40,7 @@ class ApplicationController < Sinatra::Base
    post1 = Post.find(params[:id])
    post1.update({name: params[:name], content: params[:content]})
    post1.save
-   #post1.name = params[:name]
-   #post1.content = params[:content]
-
-   redirect_to '/posts/:id'
+   redirect to '/posts/:id'
  end
 
  delete '/posts/:id/delete' do
